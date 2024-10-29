@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "mwpgVKU6hvpbdiU4cVhwDwa8h7K2iY47i6cOPjvIIEk=",
+  "Source": "FetchRequest",
+  "BasePath": "_content/FetchRequest",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FetchRequest\\wwwroot",
+      "Source": "FetchRequest",
+      "ContentRoot": "D:\\ts\\New folder (4)\\FetchRequest\\FetchRequest\\wwwroot\\",
+      "BasePath": "_content/FetchRequest",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\ts\\New folder (4)\\FetchRequest\\FetchRequest\\wwwroot\\index.html",
+      "SourceId": "FetchRequest",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ts\\New folder (4)\\FetchRequest\\FetchRequest\\wwwroot\\",
+      "BasePath": "_content/FetchRequest",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "D:\\ts\\New folder (4)\\FetchRequest\\FetchRequest\\wwwroot\\main.99616b48cb9991690d51.js",
+      "SourceId": "FetchRequest",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ts\\New folder (4)\\FetchRequest\\FetchRequest\\wwwroot\\",
+      "BasePath": "_content/FetchRequest",
+      "RelativePath": "main.99616b48cb9991690d51.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\main.99616b48cb9991690d51.js"
+    }
+  ]
+}
