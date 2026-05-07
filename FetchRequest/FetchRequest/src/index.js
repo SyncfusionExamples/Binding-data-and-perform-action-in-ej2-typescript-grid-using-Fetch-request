@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var ej2_grids_1 = require("@syncfusion/ej2-grids");
-var ej2_buttons_1 = require("@syncfusion/ej2-buttons");
-var ej2_base_1 = require("@syncfusion/ej2-base");
+const ej2_grids_1 = require("@syncfusion/ej2-grids");
+const ej2_buttons_1 = require("@syncfusion/ej2-buttons");
+const ej2_base_1 = require("@syncfusion/ej2-base");
 ej2_grids_1.Grid.Inject(ej2_grids_1.Edit, ej2_grids_1.Toolbar, ej2_grids_1.Page);
-var flag = false;
-var grid = new ej2_grids_1.Grid({
+let flag = false;
+let grid = new ej2_grids_1.Grid({
     toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
     allowPaging: true,
     actionBegin: actionBegin,
@@ -19,15 +19,15 @@ var grid = new ej2_grids_1.Grid({
     ]
 });
 grid.appendTo('#Grid');
-var button = new ej2_buttons_1.Button({
+let button = new ej2_buttons_1.Button({
     content: 'Bind data via Fetch',
     cssClass: 'e-success'
 });
 button.appendTo('#buttons');
 document.getElementById('buttons').onclick = function () {
-    var fetchRequest = new ej2_base_1.Fetch("https://localhost:7110/Grid/Getdata", 'POST'); //Use remote server host number instead ****
+    const fetchRequest = new ej2_base_1.Fetch("https://localhost:7110/Grid/Getdata", 'POST'); //Use remote server host number instead ****
     fetchRequest.send();
-    fetchRequest.onSuccess = function (data) {
+    fetchRequest.onSuccess = (data) => {
         grid.dataSource = data;
     };
 };
@@ -47,11 +47,11 @@ function actionBegin(e) {
                 contentType: 'application/json; charset=utf-8',
                 data: JSON.stringify({ value: editedData })
             });
-            fetchRequest.onSuccess = function () {
+            fetchRequest.onSuccess = () => {
                 flag = true;
                 grid.endEdit();
             };
-            fetchRequest.onFailure = function () {
+            fetchRequest.onFailure = () => {
                 flag = false;
             };
             fetchRequest.send();
@@ -65,11 +65,11 @@ function actionBegin(e) {
                 contentType: 'application/json; charset=utf-8',
                 data: JSON.stringify({ value: editedData })
             });
-            fetchRequest.onSuccess = function () {
+            fetchRequest.onSuccess = () => {
                 flag = true;
                 grid.endEdit();
             };
-            fetchRequest.onFailure = function () {
+            fetchRequest.onFailure = () => {
                 flag = false;
             };
             fetchRequest.send();
@@ -83,11 +83,11 @@ function actionBegin(e) {
                 contentType: 'application/json; charset=utf-8',
                 data: JSON.stringify({ key: editedData[0][grid.getPrimaryKeyFieldNames()[0]] })
             });
-            fetchRequest.onSuccess = function () {
+            fetchRequest.onSuccess = () => {
                 flag = true;
                 grid.deleteRecord();
             };
-            fetchRequest.onFailure = function () {
+            fetchRequest.onFailure = () => {
                 flag = false;
             };
             fetchRequest.send();
